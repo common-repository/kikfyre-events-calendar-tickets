@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ticket</title>
+        
+        <style>
+            @media print {
+            body{
+            display:none;
+            }
+            h1, h2, p { margin: 0px !important;}
+            .kf-event-special-note * { font-size: 10pt !important;}
+            .kf-event-title {line-height: 100%; }
+            table, table tr, table td { border-width: 0px;}
+            .em_ticket_template, .em_ticket_template tr, .em_ticket_template td ,.em_ticket_template th{ border: none !important;}
+            .kf-event-special-note p{padding-left: 10px; text-align: justify; font-size:10pt !important;}
+            .em_ticket_template {background: #{{background_color}} !important;}
+            .kf-font1 {font-family: {{font1}}} !important; }
+            .kf-font2 {font-family: {{font2}}} !important; }
+            .kf-font-color1 {color : #{{font_color1}} !important;}
+            .kf-font-color2 {color : #{{font_color2}} !important;}
+            
+            }
+    </style>
+
+    </head>
+    <body>                             
+                                    
+        <table class="em_ticket_template"  style="min-width: 1300px; min-height: 350px; background-color: #{{background_color}} ; border-spacing:0px; margin:0px;table-layout: fixed; overflow: hidden;">
+            <tr>
+                           <!-- Left side of ticket template -->
+                           <td style="text-align: center; width: 80%; border-right: 10px solid #{{border_color}} !important;">
+                                   <table style=" width: 100%; float:left">
+                                           <tr style=" padding: 0px;">
+                                                <td style=" width: 20%; vertical-align: middle; text-align: center;"><img style=" width: 150px;" src="{{ticket_logo1}}"></td>
+                                                <td style=" width: 60%; text-align: center;">
+                                                    <div class="kf-event-title kf-font-color1 kf-font1" style="color : #{{font_color1}};padding-top: 10px; word-break: break-word; margin-bottom: 0px; text-transform: uppercase; font-size: 36pt;">{{event_title}}<br></div>
+                                                    <p class="kf-font-color2 kf-font2" style="margin: 0px; font-size: 16pt;">{{date_time}}</p>
+    <!--                                            <p>{{duration}}</p>-->
+                                                    <br>
+                                                    <p class="kf-font-color2 kf-font2" style="font-size: 16pt; margin-bottom: 0px; padding:0px; text-transform: uppercase;" >{{venue_name}}</p>
+                                                    <p class="kf-font-color1 kf-font2" style="color : #{{font_color1}}; font-size: 12pt;">{{venue_address}}</p>
+                                                    <br>
+                                                    <p class="kf-font-color2 kf-font2" style=" font-size: 16pt; margin-bottom: 0px; padding:0px; text-transform: uppercase;">{{organiser}}</p>
+                                                    <p class="kf-font-color1 kf-font2" style=" color : #{{font_color1}}; font-size: 12pt;">{{organiser_contact}}</p>
+                                                    <br>
+                                                    <p class="kf-font-color1 kf-font2 " style="color : #{{font_color1}}; font-size: 16pt; text-transform: capitalize;">Age Group : {{age_group}}</p>
+                                                </td>
+                                                 <td style=" width: 20%;">
+                                                           &nbsp;
+                                                   </td>
+                                           </tr>
+                                           <tr style="padding-bottom: 20px;">
+                                                   <td colspan="2" style="color: width: 80%; vertical-align: middle; text-align: left;color : #{{font_color1}};" class="kf-event-special-note kf-font-color1 kf-font2">
+                                                       {{audience_note}}
+                                                   </td>
+                                                   <td style="width: 20%; padding-bottom: 20px; text-align: center;">
+                                                       <p class="kf-font-color2 kf-font2" style="font-size: 16pt;">Price</p>
+                                                       <div class="kf-event-title kf-font-color1 kf-font2" style="white-space: nowrap;color : #{{font_color1}};"><span class="kf-font-color1 kf-font2" id="kf-currency-symbol" style="font-size: 48pt;color : #{{font_color1}};">{{currency_symbol}}</span> <span id="kf-event-price" class="kf-font-color1 kf-font2" style="color : #{{font_color1}}; font-size: 48pt; line-height: 100%;">{{ticket_price}}</span><sup class="kf-ticket-price-dec kf-font-color1 kf-font2" id="kf-ticket-price-dec" style="font-size: 24pt;">{{ticket_price_dec}}</sup></div>
+                                                   </td>
+                                           </tr>
+                                   </table> 
+                           </td>
+
+                           <!-- Right side of ticket template -->
+                           <td style="vertical-align: middle; text-align: center; width: 30%;" id="kf-seat_wrap">
+                                   <table style="text-align: center; width: 100%; transform: rotateZ(-90deg);">
+                                       <tr>
+                                               <td style="text-align: center;">
+                                                  
+                                                           <p class="kf-font-color2 kf-font2" style="text-transform: uppercase;font-size: 24pt;">{{seat_type}}</p>
+                                                   </td>
+                                           </tr>
+                                           <tr>
+                                                   <td style="text-align: center;">
+                                                       <div class="kf-font-color1 kf-font1" style="font-size: 90pt; line-height: 100%; white-space: nowrap;color : #{{font_color1}};">{{seat_no}}</div>
+                                                   </td>
+                                           </tr>
+                                           <tr>
+                                                   <td style="text-align: center; ">
+                                                       <p class="kf-font-color1" style="color : #{{font_color1}}; font-size: 24pt; font-family: monospace !important;">ID #{{booking_id}}</p>
+                                                   </td>
+                                           </tr>
+                                   </table>
+                           </td>
+                   </tr>
+
+        </table>
+    </body>
+</html>

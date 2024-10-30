@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ticket</title>
+        
+        <style type="text/css">
+                *{
+                    margin: 0;
+                    padding: 0;
+                }
+                table,tbody, tr, td { margin: 0px; padding: 0px; } 
+                td{ vertical-align: middle; }
+                .em_ticket_template {
+                    width: 600px;    
+                }
+                
+                .em_ticket_event, .em_ticket_event_venue_wrap {
+                    width: 80%;
+                    clear: both;
+                    height: 161px;
+                }
+
+                .em_ticket_logo, .em_ticket_event_venue_title {
+                    width: 30%;
+                }
+                .em_ticket_logo {text-align: center;}
+                .em_ticket_logo img { 
+                    width: 100px;
+                    padding-top: 10px;
+                }
+                .em_ticket_event_venue_title {
+                        font-size: 26px;
+                        text-align: right;
+                        text-decoration: underline;
+                }
+                .em_ticket_event_name, .em_ticket_event_venue {
+                    width: 70%;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+
+                .em_ticket_event_detail {width:80%;}
+
+                .em_ticket_event_name .em_ticket_event_title {font-size: 40px;}
+
+                .em_ticket_event_name .em_ticket_event_at { font-size: 24px;}
+
+                .em_ticket_seat {
+                    width: 20%;
+                    vertical-align: middle;
+                    text-align: center;
+                 }
+
+                .em_ticket_seat_title {font-size:16px; }
+
+                .em_ticket_seat .em_ticket_seat_no {font-size: 26px;}
+
+                .em_ticket_event_venue .em_ticket_event_timing, .em_ticket_event_venue .em_ticket_event_address {
+                    font-size: 16px;
+                }
+
+
+        </style>
+    </head>
+    <body>
+                        <table class="em_ticket_template"  style="padding-top: 10px; position: absolute; background-color: #{{background_color}} ; border: 10px solid #{{border_color}} ;">
+                            <tr  class="em_ticket-wrapper">
+                                <td  class="em_ticket_event">
+                                    <table>
+                                        <tr>
+                                            <td class="em_ticket_logo">
+                                                <img src="{{ticket_logo}}" />
+                                            </td>
+                                            <td  class="em_ticket_event_name">
+                                                <h1 class="em_ticket_event_title">{{event_title}}</h1>
+                                                <p class="em_ticket_event_at">At {{venue_name}}</p>
+                                            </td>
+                                        </tr>
+                                        <tr  class="em_ticket_event_venue_wrap">
+                                            <td  class="em_ticket_event_venue_title">
+                                                <h2 style="text-align: right; padding-right: 10px;">Venue:</h2>
+                                            </td>
+                                            <td  class="em_ticket_event_venue">
+                                                 <p class="em_ticket_event_address">{{venue_address}}</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                
+                                <td  class="em_ticket_seat">
+                                    <p class="em_ticket_seat_title">No. of Persons</p>
+                                    <h2 class="em_ticket_seat_no">{{seat_no}}</h2>                                
+                                </td>
+                            </tr>
+                        </table>
+    </body>
+</html>
